@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Télétravail</title>
+  <link rel="stylesheet" href="CSS/style-de-Tristan.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    /* Styles du bouton Surprise */
+    #surpriseBtn {
+      font-size: 22px;
+      padding: 10px 20px;
+      background: #e13e4f;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Arial Black', sans-serif;
+      box-shadow: 0 0 10px white;
+      transition: transform 0.2s ease;
+      margin-bottom: 20px;
+    }
+    #surpriseBtn:hover {
+      transform: scale(1.1);
+      background: white;
+      color: #e13e4f;
+    }
+    /* Zone d'animation */
+    #explosion-zone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    .word-fly {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      animation: flyWords 3s linear forwards;
+      font-family: 'Arial Black', sans-serif;
+      text-shadow: 0 0 10px black;
+      user-select: none;
+      white-space: nowrap;
+    }
+    @keyframes flyWords {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(calc(100vw - 150px), -100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    @keyframes shakeScreen {
+      0% { transform: translate(0, 0); }
+      20% { transform: translate(-5px, 5px); }
+      40% { transform: translate(5px, -5px); }
+      60% { transform: translate(-5px, 5px); }
+      80% { transform: translate(5px, -5px); }
+      100% { transform: translate(0, 0); }
+    }
+    .shake {
+      animation: shakeScreen 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header avec les liens d'images en haut à droite -->
+  <header>
+    <ul style="list-style: none; display: flex; gap: 10px; justify-content: flex-end;">
+      <li><a href="index08.html"><img src="Image/image11.png" width="2%"></a></li>
+      <li><a href="index09.html"><img src="Image/image10.jpg" width="2.5%"></a></li>
+    </ul>
+  </header>
+
+  <!-- Titre animé -->
+  <h1 class="titre">
+    <span class="text-wrapper">
+      <span class="line line1"></span>
+      <span class="letters letters-left">Télétravail : </span>
+      <span class="letters letters-right">Un bénéfice pour l'équilibre personnel ou un frein à la productivité et aux interactions sociales ?</span>
+      <span class="line line2"></span>
+    </span>
+  </h1>
+
+  <!-- Bandeau principal image cliquable -->
+  <div id="entete-de-page">
+    <a href="https://fr.wikipedia.org/wiki/Blue_Lock">
+      <img src="Image/image1.gif" width="100%">
+    </a>
+  </div>
+
+  <!-- Menu principal -->
+  <table id="bloc-menu" border="1">
+    <tr>
+      <th><a href="index.html">Pour comprendre...</a></th>
+      <th><a href="index02.html">Timeline</a></th>
+      <th><a href="index04.html">Acteurs</a></th>
+      <th><a href="index05.html">Sources</a></th>
+      <th><a href="index10.html">Informations sur notre équipe</a></th>
+    </tr>
+  </table>
+  <br />
+
+<!-- Contenu principal -->
+<div id="contenu">
+  <div id="contenu">
+    
+    <!-- Titre + Bouton en haut, centrés -->
+    <div id="conteneur-premiere-section">
+      <h1>Pour comprendre...</h1>
+      <button id="surpriseBtn">Surprise 🔥</button>
+    </div>
+
+    <!-- Section 1 : texte centré en dessous -->
+    <section class="fade-in section-appear">
+      <p>
+        Depuis plus de 5 ans, les conditions de travail ont été bouleversées par l’arrivée soudaine et inédite du covid 19.
+        Les entreprises ont dû réinventer leurs méthodes de travail et s’adapter à la crise sanitaire.
+        C’est alors que le télétravail s’est développé massivement afin de diminuer les contacts entre employés, collègues et patrons.
+        5 ans plus tard, cette méthode de travail qui n’est plus essentielle pour des questions sanitaires est restée présente dans le quotidien de nombreux Français.
+      </p>
+    </section>
+
+
+
+
+  <!-- Statistiques -->
+  <section>
+    <p>En 2019, seulement 9 % des salariés pratiquaient le télétravail au moins occasionnellement, c'est-à-dire quelques jours ou demi-journées par mois. D’après une étude de l’INSEE en 2024, plus d'un salarié du secteur privé sur cinq est concerné, avec une moyenne de 1,9 jour de travail à distance par semaine. Ainsi, la pandémie a considérablement accéléré l'adoption du télétravail en France, passant d'une pratique occasionnelle à une méthode de travail plus courante.</p>
+  </section>
+
+  <!-- Problématique -->
+  <section>
+    <p>Ces dernières années, de nombreuses questions ont pris naissance autour du télétravail. Les Français veulent savoir si le télétravail est réellement bénéfique pour l’homme mais aussi quel a été son impact sur la population ces dernières années.</p>
+    <p>De cette façon, le télétravail possède deux facettes, divisant la population entre personnes pour et personnes contre. Comme toute chose, le télétravail possède ses points forts et ses points faibles, mais quels sont-ils ?</p>
+  </section>
+
+  <!-- Points positifs du télétravail -->
+  <section>
+    <h2>Les avantages</h2>
+    <p>D’un côté, le télétravail est perçu comme une avancée bénéfique. Il permet de diminuer le taux d'absentéisme. Le télétravail a engendré une baisse d’absentéisme chez les salariés, passant de 39% en présentiel à 12% en télétravail. Cela engendre une augmentation de la productivité, profitant aux entreprises mais aussi aux employés.</p>
+    <p>De plus, le télétravail permet un meilleur équilibre entre vie professionnelle et vie personnelle : travailler à la maison est un gain de temps car il n’y a pas de temps de trajet mais aussi des horaires plus flexibles. Cela permet à l’homme de s’épanouir dans des activités extérieures et de se libérer les idées (éloigner la pression, le stress et la fatigue). Les employés peuvent mieux gérer leur temps, tandis que les entreprises réduisent leurs coûts opérationnels.</p>
+  </section>
+
+  <!-- Points négatifs du télétravail -->
+  <section>
+    <h2>Les inconvénients</h2>
+    <p>De l’autre côté, certains ne sont pas d’accord et pensent que le télétravail peut être un frein pour la productivité. Il est plus difficile d’être concentré à la maison car il ne s’agit pas d'une atmosphère de travail. Vous pouvez être perturbé par votre famille mais plein d’autres facteurs. En entreprise, vous êtes entouré de personnes dans la même situation que vous, cela vous pousse à travailler et à être concentré.</p>
+    <p>Le point négatif qui revient le plus est le danger pour les interactions sociales. L’isolement lié au travail représente un risque psychosocial élevé. La privation d’interactions sociales peut avoir des retombées négatives sur tous les collaborateurs et ce, peu importe leur configuration familiale (seul ou avec enfants), leur lieu de vie (surface réduite ou grand logement).</p>
+  </section>
+
+  <!-- Conclusion -->
+  <section>
+    <p>Ainsi, de nombreux enjeux entrent en jeu dû au développement du télétravail. Que ce soit l’équilibre entre vie pro et perso, la productivité et la performance, la cohésion et les interactions sociales, et pour finir les inégalités entre salariés, tous vont être traités dans ce devoir à travers de nombreux acteurs selon différentes échelles.</p>
+  </section>
+</div>
+
+  </div>
+
+  <!-- Zone animation -->
+  <div id="explosion-zone"></div>
+
+  <!-- Pied de page -->
+  <div id="pied-de-page">
+    <p>Dernière mise à jour : 10/06/2025</p>
+    <p>L'équipe "Le passé c'est le passé"</p>
+    <a href="index10.html">Informations sur notre équipe</a>
+  </div>
+
+</body>
+</html>

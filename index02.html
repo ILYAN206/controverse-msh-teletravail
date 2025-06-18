@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Timeline</title>
+  <link rel="stylesheet" href="CSS/style-index02.css" type="text/css" />
+</head>
+
+<body>
+
+  <!-- En-tête -->
+  <header>
+  
+
+  </header>
+  
+    <!-- En-tête de page -->
+  <div id="entete-de-page"> 
+    <h1>Timeline</h1>
+  </div>
+
+  <!-- Menu de navigation -->
+  <nav>
+  <!-- Menu principal -->
+  <table id="bloc-menu" border="1">
+    <tr>
+      <th><a href="index.html">Pour comprendre...</a></th>
+      <th><a href="index02.html">Timeline</a></th>
+      <th><a href="index04.html">Acteurs</a></th>
+      <th><a href="index05.html">Sources</a></th>
+      <th><a href="index10.html">Informations sur notre équipe</a></th>
+    </tr>
+  </table>
+  <br />
+  </nav>
+
+
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="container left-container">
+      <img src="Image/image32.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Telework</h2>
+        <small>1972</small>
+        <p>Le terme « telework » apparaît pour la première fois dans un article du Washington Post.</p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container right-container">
+      <img src="Image/image39.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Telecommuting</h2>
+        <small>1975</small>
+        <p> Jack Nilles, considéré comme le père du télétravail, introduit le concept de « telecommuting », (télétravail).</p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container left-container">
+      <img src="Image/image40.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Rapport sur le télétravail</h2>
+        <small>1993</small>
+        <p>Le Premier ministre Édouard Balladur commande un rapport sur le télétravail à Thierry Breton, alors dirigeant de la société informatique Bull. Le rapport définit le télétravail comme une modalité d'organisation du travail à distance.</p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container right-container">
+      <img src="Image/image41.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>G7 de Bruxelles</h2>
+        <small>1995</small>
+        <p>La France inscrit le télétravail à l'ordre du jour du G7 de Bruxelles, le présentant comme un atout économique et social dans le contexte de la société de l'information.</p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container left-container">
+      <img src="Image/image38.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Accord-cadre européen</h2>
+        <small>2002</small>
+        <p>Signature de l'accord-cadre européen sur le télétravail, établissant des lignes directrices pour sa mise en œuvre dans les États membres de l'Union européenne.</p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container right-container">
+      <img src="Image/image37.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>ANI</h2>
+        <small>2005</small>
+        <p>En France, signature de l'Accord national interprofessionnel (ANI) relatif au télétravail, visant à encadrer cette pratique.</p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container left-container">
+      <img src="Image/image36.jpeg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Loi Warsmann</h2>
+        <small>2012</small>
+        <p>La loi Warsmann intègre les dispositions de l'ANI de 2005 dans le Code du travail, offrant un cadre juridique au télétravail en France</p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container right-container">
+      <img src="Image/image35.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Ordonnances de Macron</h2>
+        <small>2017</small>
+        <p>Réforme du télétravail avec les ordonnances Macron..</p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container left-container">
+      <img src="Image/image34.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Covid 19</h2>
+        <small>2020</small>
+        <p>La pandémie de la COVID-19 entraîne un télétravail obligatoire.</p>
+        <span class="left-container-arrow"></span>
+      </div>
+    </div>
+
+    <div class="container right-container">
+      <img src="Image/image33.jpg" alt="Illustration" />
+      <div class="text-box">
+        <h2>Amazon</h2>
+        <small>2024</small>
+        <p>Des entreprises telles qu'Amazon annoncent la fin du télétravail pour leurs employés.</p>
+        <span class="right-container-arrow"></span>
+      </div>
+    </div>
+  </div>
+  
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight - 100)
+    );
+  }
+
+  function revealTimelineItems() {
+    document.querySelectorAll('.container').forEach(container => {
+      if (isInViewport(container)) {
+        container.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealTimelineItems);
+  window.addEventListener('load', () => {
+    revealTimelineItems();
+
+  });
+</script>
+
+<div class="nilles">
+  <h3>Voici Jack Nilles, le père du télétravail</h3>
+  <img id="Dwayne-Johnson" src="Image/image26.gif" alt="Jack Nilles ?" />
+  <p id="Jack-Nilles">Mince ce n'est pas lui 🤦‍</p>
+  <button onclick="Changement()">Clique ici pour voir le vrai Jack Nilles</button>
+</div>
+<script src="script2.js"></script>
+
+
+
+
+  <!-- Pied de page -->
+  <footer id="pied-de-page">
+    <p>Dernière mise à jour : 10/06/2025</p>
+    <p>L'équipe "Le passé c'est le passé"</p>
+    <a href="index10.html">Informations sur notre équipe</a>
+  </footer>
+
+</body>
+</html>

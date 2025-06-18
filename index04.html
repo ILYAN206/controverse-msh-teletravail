@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Acteurs de la controverse</title>
+  <link rel="stylesheet" href="CSS/style-index04.css" type="text/css" />
+</head>
+
+<body>
+
+  <!-- En-tête de page -->
+  <header>
+    <div style="text-align: right; padding: 10px;">
+      <!-- liens supprimés, zone vide -->
+    </div>
+  </header>
+
+  <!-- Bandeau titre -->
+  <div id="entete-de-page">
+    <h1>Acteurs de la controverse</h1>
+  </div>
+
+  <!-- Menu de navigation -->
+  <!-- Menu principal -->
+  <table id="bloc-menu" border="1">
+    <tr>
+      <th><a href="index.html">Pour comprendre...</a></th>
+      <th><a href="index02.html">Timeline</a></th>
+      <th><a href="index04.html">Acteurs</a></th>
+      <th><a href="index05.html">Sources</a></th>
+      <th><a href="index10.html">Informations sur notre équipe</a></th>
+    </tr>
+  </table>
+  <br />
+  
+  
+
+  <!-- Contenu principal avec animation des personnages -->
+  <div class="content">
+    <div class="menu">
+<div class="perso-container">
+  <!-- Colonne acteurs contre -->
+  <div class="perso-column">
+    <h3>Acteurs contre</h3>
+
+    <div class="perso" data-text="Jean-Claude Delgènes alerte sur les effets du télétravail sur la santé mentale. Il dénonce l’isolement social et la confusion vie pro/perso. Ses travaux ont poussé les entreprises à mieux prévenir les risques psychosociaux.">
+      <div class="left" style="background-image:url('Image/image28.jpeg');"></div>
+      <div class="right"><h1>Jean Claude Delgènes</h1></div>
+    </div>
+
+    <div class="perso" data-text="Benoît Salain critique le télétravail pour son impact sur la cohésion et la qualité du travail. Dans son entreprise, il est exclu (sauf pour un architecte), car jugé nuisible à la motivation. Il alerte sur les risques pour les petites structures.">
+      <div class="left" style="background-image:url('Image/image29.jpg');"></div>
+      <div class="right"><h1>Benoit Salin</h1></div>
+    </div>
+
+    <div class="perso" data-text="Alain Garnier estime que le télétravail menace le lien social. Il propose une Digital Workplace pour maintenir la culture d’entreprise à distance. Son discours influence les réflexions sur un télétravail collectif et porteur de sens.">
+      <div class="left" style="background-image:url('Image/image30.jpg');"></div>
+      <div class="right"><h1>Alain Garnier</h1></div>
+    </div>
+  </div>
+
+  <!-- Colonne acteurs pour -->
+  <div class="perso-column">
+    <h3>Acteurs pour</h3>
+
+    <div class="perso" data-text="Les salariés d’Ubisoft, attachés au télétravail, se sont mobilisés contre sa réduction. Des grèves ont été menées (2024 & 2025) pour dénoncer un retour forcé au bureau.Ils défendent un mode de travail équilibré, et un cadre flexible adapté à leur quotidien.">
+      <div class="left" style="background-image:url('Image/image12.png');"></div>
+      <div class="right"><h1>Salariés d'Ubisoft</h1></div>
+    </div>
+
+    <div class="perso" data-text="Jean Pralong soutient le télétravail car il favorise l’autonomie, mais il doit être mieux encadré : il propose de développer les compétences clés, adapter les outils RH et renforcer la coordination pour préserver engagement et cohésion.">
+      <div class="left" style="background-image:url('Image/image18.jpg');"></div>
+      <div class="right"><h1>Jean Pralong</h1></div>
+    </div>
+
+    <div class="perso" data-text="Claudia Senik soutient le télétravail partiel car il améliore l’autonomie, l’équilibre vie pro/perso et le bien-être des salariés. Elle appuie ses recherches sur des données scientifiques, coordonne des travaux au CEPREMAP et influence le débat public sur le télétravail hybride.">
+      <div class="left" style="background-image:url('Image/image20.jpg');"></div>
+      <div class="right"><h1>Claudia Senik</h1></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Zone d'affichage du texte -->
+<div id="texte-acteur" style="max-width: 900px; margin: 30px auto; padding: 20px; background: rgba(255 255 255 / 0.1); border-radius: 12px; color: white; font-size: 1.3rem; min-height: 120px; box-shadow: 0 0 15px cyan;"></div>
+
+<script>
+const persos = document.querySelectorAll('.perso');
+const texteActeur = document.getElementById('texte-acteur');
+
+persos.forEach(perso => {
+  perso.addEventListener('click', () => {
+    const texte = perso.getAttribute('data-text');
+
+    // Supprimer la classe pour reset l'animation
+    texteActeur.classList.remove('visible');
+
+    // Pour permettre de relancer l'animation si on clique plusieurs fois sur le même
+    void texteActeur.offsetWidth;
+
+    // Changer le texte et relancer l'animation
+    texteActeur.textContent = texte;
+    texteActeur.classList.add('visible');
+
+    persos.forEach(p => p.classList.remove('active'));
+    perso.classList.add('active');
+  });
+});
+
+
+
+
+</script>
+
+
+  <!-- Section supplémentaire -->
+  <div id="contenu">
+    <h1><br /></h1>
+    <h1><br /></h1>
+  </div>
+
+  <!-- Pied de page -->
+  <div id="pied-de-page">
+    <p>Dernière mise à jour : 10/06/2025</p>
+    <p>L'équipe "Le passé c'est le passé"</p>
+    <a href="index10.html">Informations sur notre équipe</a>
+  </div>
+
+</body>
+
+</html>
