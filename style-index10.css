@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+/* ==================== Base ==================== */
+body, div, h1, h2, h3, p, table, th {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #2ac5cb 50%, #ff914d 50%);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* ==================== Header ==================== */
+header {
+  padding: 1px;
+  background-color: white;
+  text-align: right;
+  color: black;
+  font-family: 'Arial Black', sans-serif;
+}
+
+nav img {
+  margin: 5px;
+  vertical-align: middle;
+}
+
+/* ==================== Entête de page ==================== */
+#entete-de-page {
+  padding: 5px;
+  height: auto;
+  background: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  color: white;
+}
+
+#entete-de-page h1 {
+  font-size: 40px;
+  font-family: 'Arial Black', sans-serif;
+  margin-bottom: 10px;
+}
+
+#entete-de-page img {
+  width: 100%;
+  max-height: 1400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================== Menu (harmonisé avec le style exemple) ==================== */
+#bloc-menu {
+  width: 100%;
+  height: 36px;
+  background-color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#bloc-menu th {
+  width: 500px;
+  height: 60px;
+  background-color: white;
+  font-size: 20px;
+}
+
+#bloc-menu th a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #2ac5cb;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#bloc-menu th a:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+
+
+/* ==================== Contenu ==================== */
+#contenu {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 60px auto;
+  color: #f5f5f5;
+  text-align: left;
+  line-height: 1.75;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  font-size: 1.1em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#contenu h2 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 1.6em;
+  border-left: 6px solid #ff914d;
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bio {
+  margin-bottom: 40px;
+}
+
+.bio h3 {
+  color: #ffd166;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.bio p {
+  color: #f0f0f0;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+/* ==================== Responsive ==================== */
+@media screen and (max-width: 768px) {
+  #contenu {
+    padding: 30px;
+    font-size: 1em;
+  }
+
+  #contenu h2 {
+    font-size: 1.3em;
+  }
+
+  #entete-de-page h1 {
+    font-size: 30px;
+  }
+}
+
+.bio-hidden {
+  color: #222; /* Texte foncé et lisible */
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  margin-top: 10px;
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.bio-hidden.visible {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 15px;
+}
+
+.bio-hidden.visible p {
+  animation: typing 2.5s steps(40, end), blink 0.75s step-end infinite;
+  white-space: normal;
+  overflow: visible;
+  border-right: 2px solid #000;
+}
+
+/* Animation type machine à écrire */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+.btn-bio {
+  cursor: pointer;
+  width: 150px;
+  border-radius: 12px;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-bio:hover {
+  transform: scale(1.05);
+}

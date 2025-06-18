@@ -1,0 +1,471 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+/* ==================== Base ==================== */
+body, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #2ac5cb 50%, #ff914d 50%);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px; /* Avant : 20px */
+  text-align: center;
+  color: white;
+}
+
+
+
+/* ==================== Header ==================== */
+header {
+  padding: 1px;
+  background-color: white;
+  text-align: right;
+  color: black;
+  font-family: 'Arial Black', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-left: -10px;
+  font-family: 'Arial Black', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+/* ==================== Texte principal ==================== */
+/* Style général des sections */
+/* Style général des sections - fond avec dégradés doux et couleurs harmonisées */
+#contenu section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  background: linear-gradient(135deg, rgba(42,197,203,0.9), rgba(255,145,77,0.9));
+  color: white;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#contenu section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.25);
+}
+
+/* Permet d’ajouter une image de fond légère si besoin */
+#contenu section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Titre H2 amélioré */
+#contenu section h2 {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: white;
+  position: relative;
+}
+
+#contenu section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: white;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+/* Paragraphes lisibles */
+#contenu section p {
+  margin-bottom: 1.2em;
+  font-size: 1.12rem;
+}
+
+/* Images intégrées dans sections */
+#contenu section img {
+  display: block;
+  margin: 25px auto 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeUpSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section {
+  animation: fadeUpSlide 1s ease-out forwards;
+}
+
+
+
+
+
+/* Animation de base lors de l'entrée en vue */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation apparente */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================== Titres animés ==================== */
+.letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+.letters-right {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #2ac5cb, #ff914d, #2ac5cb);
+  width: 100%;
+  transform-origin: left;
+  margin: 10px 0;
+  opacity: 0;
+}
+
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 2.5em;
+  color: #402d2d;
+}
+
+.ml5 .text-wrapper {
+  display: inline-block;
+  padding: 0.1em 0.05em 0.15em 0;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #402d2d;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* ==================== Autres sections ==================== */
+#bloc-menu {
+  width: 100%;
+  height: 36px;
+  background-color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+#bloc-menu th {
+  width: 500px;
+  height: 60px;
+  background-color: white;
+  font-size: 20px;
+}
+
+#bloc-menu th a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #2ac5cb;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#bloc-menu th a:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+#entete-de-page {
+  padding: 5px;
+  height: 100px;
+  background: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  color: white;
+}
+
+#pied-de-page {
+  padding: 5px;
+  background-color: white;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+}
+
+/* ==================== Divers ==================== */
+ul {
+  list-style-type: square;
+  text-align: left;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+img {
+  float: right;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  font-family: 'Work Sans', sans-serif;
+  color: #00f6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+th {
+  width: 500px;
+  height: 60px;
+  background-color: white;
+  font-size: 20px;
+}
+
+/* ==================== Effets texte ==================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.crazy-letter {
+  display: inline-block;
+  opacity: 1;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.4) rotate(720deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* ==================== Bouton surprise ==================== */
+#surpriseBtn {
+  font-size: 22px;
+  padding: 10px 20px;
+  background: #e13e4f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Arial Black', sans-serif;
+  box-shadow: 0 0 10px white;
+  transition: transform 0.2s ease;
+}
+
+#surpriseBtn:hover {
+  transform: scale(1.1);
+}
+
+.shake-soft {
+  animation: shakeSoft 0.6s ease-in-out;
+}
+
+@keyframes shakeSoft {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.icon-float {
+  position: absolute;
+  font-size: 1.8rem;
+  opacity: 0.85;
+  animation: floatUp 3.5s ease forwards;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.3);
+    opacity: 0;
+  }
+}
+
+
+/* ==================== Explosion ==================== */
+#explosion-zone {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: visible;
+}
+
+.word-fly {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  animation: flyWords 3s linear forwards;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 0 10px black;
+}
+
+@keyframes flyWords {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100vw - 100px), -100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shakeScreen {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-5px, 5px); }
+  40% { transform: translate(5px, -5px); }
+  60% { transform: translate(-5px, 5px); }
+  80% { transform: translate(5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake {
+  animation: shakeScreen 0.5s;
+}
+
+/* Particules */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00f6ff;
+  opacity: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 3px #00f6ff);
+  animation: particle-explode 600ms forwards;
+}
+
+@keyframes particle-explode {
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* ==================== Vidéo ==================== */
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin-top: 30px;
+  height: 0;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(50px) scale(0.97);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.section-appear {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+

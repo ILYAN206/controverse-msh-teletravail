@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+/* ==================== Réinitialisation ==================== */
+body, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #2ac5cb 50%, #ff914d 50%);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== Header ==================== */
+header {
+  padding: 1px;
+  background-color: white;
+  text-align: right;
+  color: black;
+  font-family: 'Arial Black', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Arial Black', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ==================== Bandeau titre ==================== */
+#entete-de-page {
+  padding: 5px;
+  height: 100px;
+  background: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== Bloc Menu ==================== */
+#bloc-menu {
+  height: 36px;
+  background-color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+#bloc-menu th {
+  width: 500px;
+  height: 60px;
+  background-color: white;
+  font-size: 20px;
+}
+
+#bloc-menu th a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #2ac5cb;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#bloc-menu th a:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+/* ==================== Contenu principal ==================== */
+.content {
+  flex: 1;
+  width: 100%;
+  background: linear-gradient(135deg, #2ac5cb 50%, #ff914d 50%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+
+/* ==================== Menu et cases personnages ==================== */
+/* Container principal des personnages en 2 colonnes */
+.perso-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1100px;
+  margin: 20px auto;
+  gap: 40px;
+}
+
+/* Colonne gauche (contre) et droite (pour) */
+.perso-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Titre de colonne */
+.perso-column h3 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Style général des cases personnage */
+.perso {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(13,25,37,0.8), rgba(51,78,105,0.85));
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover plus visible */
+.perso:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 255, 255, 0.7);
+  border: 2px solid #00ffff;
+}
+
+/* Image à gauche */
+.perso .left {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  background-color: #0d1925;
+  background-size: cover;
+  background-position: center;
+  margin-right: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Texte */
+.perso .right {
+  flex: 1;
+  color: white;
+}
+
+.perso .right h1 {
+  margin: 0;
+  font-size: 1.8em;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(0,255,255,0.7);
+}
+
+/* Responsive simplifié */
+@media (max-width: 900px) {
+  .perso-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .perso-column {
+    width: 100%;
+  }
+}
+
+
+/* ==================== Pied de page ==================== */
+
+
+
+
+#pied-de-page {
+  padding: 5px;
+  background-color: white;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+}
+
+
+/* ==================== Liens ==================== */
+a {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  color: #00f6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+/* ==================== Images perso-bg ==================== */
+.perso-bg {
+  margin-left: 50px;
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 20%;
+}
+
+.perso-bg img {
+  display: none;
+}
+
+.active .perso-bg img {
+  display: flex;
+}
+
+/* ==================== Suppression flottement img global ==================== */
+img {
+  float: none;
+}
+
+/* ==================== Autres styles ==================== */
+/* Réglages spécifiques si besoin */
+
+#texte-acteur {
+  opacity: 0;
+  transform: translateY(40px) scale(0.85);
+  transition: none;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 50px;
+  background: rgba(255, 255, 255, 0.9); /* Fond blanc très léger */
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  color: #000000; /* Texte noir */
+  font-size: 4rem;
+  line-height: 1.5;
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  text-shadow: none;
+  user-select: none;
+  will-change: opacity, transform;
+}
+
+@keyframes texteShow {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+    filter: drop-shadow(0 0 2px #000);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+    filter: drop-shadow(0 0 15px #000);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 8px #000);
+  }
+}
+
+#texte-acteur.visible {
+  animation: texteShow 1s ease forwards;
+}
+
+
+
+
+
+
